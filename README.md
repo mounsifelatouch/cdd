@@ -1,2 +1,2 @@
 # cdd
-Bioactivity classification/ H. pylori urease
+Bioactivity Classification/ H. pylori urease
