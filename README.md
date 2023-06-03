@@ -1,2 +1,2 @@
 # cdd
-Bioactivity classification of H. pylori urease inhibitors using OnlyGraph fingerprint (PaDEL-Descriptor software)
+Bioactivity classification of H. pylori urease inhibitors using PubChem fingerprint (PaDEL-Descriptor software)
