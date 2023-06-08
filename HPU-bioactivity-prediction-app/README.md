@@ -15,7 +15,7 @@ conda activate bioactivity
 Download requirements.txt file
 
 ```
-wget https://raw.githubusercontent.com/dataprofessor/bioactivity-prediction-app/main/requirements.txt
+wget [https://raw.githubusercontent.com/dataprofessor/bioactivity-prediction-app/main/requirements.txt](https://raw.githubusercontent.com/mounsifelatouch/cdd/master/HPU-bioactivity-prediction-app/requirements.txt)
 
 ```
 
@@ -23,10 +23,6 @@ Pip install libraries
 ```
 pip install -r requirements.txt
 ```
-
-###  Download and unzip contents from GitHub repo
-
-Download and unzip contents from https://github.com/dataprofessor/bioactivity-prediction-app/archive/main.zip
 
 ### Generating the PKL file
 
