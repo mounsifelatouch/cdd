@@ -15,7 +15,7 @@ conda activate bioactivity
 Download requirements.txt file
 
 ```
-wget https://raw.githubusercontent.com/mounsifelatouch/cdd/master/HPU-bioactivity-prediction-app/requirements.txt
+wget wget https://raw.githubusercontent.com/mounsifelatouch/cdd/master/HPU-bioactivity-prediction-app/requirements.txt
 
 ```
 
