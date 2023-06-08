@@ -23,7 +23,7 @@ def filedownload(df):
 
 # Model building
 def build_model(input_data):
-    # Reads in saved classification model
+    # Reads in saved regression model
     load_model = pickle.load(open('HPU_model.pkl', 'rb'))
     # Apply model to make predictions
     prediction = load_model.predict(input_data)
@@ -41,13 +41,12 @@ st.image(image, use_column_width=True)
 
 # Page title
 st.markdown("""
-# Bioactivity Prediction App (Helicobacter Pylori Urease)
+# Bioactivity Prediction App (Helicobacter Pylori Urease `HPU`)
 
-This app allows you to predict the bioactivity towards inhibting the `HPU`. 
-`HPU` is a drug target for Helicobacter pylori's disease.
+This app allows you to predict the bioactivity towards inhibting the `HPU`, which is a drug target for Helicobacter pylori's disease.
 
 **Credits**
-- App built in `Python` + `Streamlit` By M. EL ATOUCH 
+- App built in `Python` + `Streamlit` by M. EL ATOUCH
 - Descriptor calculated using [PaDEL-Descriptor](http://www.yapcwsoft.com/dd/padeldescriptor/) [[Read the Paper]](https://doi.org/10.1002/jcc.21707).
 ---
 """)
