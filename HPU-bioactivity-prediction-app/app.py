@@ -33,6 +33,13 @@ def build_model(input_data):
     df = pd.concat([molecule_id, prediction_output], axis=1)
     st.write(df)
     st.markdown(filedownload(df), unsafe_allow_html=True)
+    # Count number of compounds predicted active and inactive
+    num_total_compounds = len(df)
+    num_predicted_active = len(df[df['activity'] == 1])
+    num_predicted_inactive = len(df[df['activity'] == 0])
+    st.write(f"Number of compounds: {num_total_compounds}")
+    st.write(f"Number of compounds predicted active: {num_predicted_active}")
+    st.write(f"Number of compounds predicted inactive: {num_predicted_inactive}")
 
 # Logo image
 image = Image.open('logo.png')
