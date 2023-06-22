@@ -5,6 +5,7 @@ import subprocess
 import os
 import base64
 import pickle
+import time
 
 # Molecular descriptor calculator
 def desc_calc():
@@ -26,7 +27,11 @@ def build_model(input_data):
     # Reads in saved regression model
     load_model = pickle.load(open('HPU_model.pkl', 'rb'))
     # Apply model to make predictions
+    start_time = time.time()
     prediction = load_model.predict(input_data)
+    end_time = time.time()
+    pred_time = end_time - start_time
+    st.write(f"Time taken for prediction: {pred_time:.2f} seconds")
     st.header('**Prediction output**')
     prediction_output = pd.Series(prediction, name='activity')
     molecule_id = pd.Series(load_data[1], name='molecule_id')
@@ -73,7 +78,11 @@ if st.sidebar.button('Predict'):
     st.write(load_data)
 
     with st.spinner("Calculating descriptors..."):
+        start_time = time.time()
         desc_calc()
+        end_time = time.time()
+        pred_time = end_time - start_time
+        st.write(f"Time taken for descriptors calculation: {pred_time:.2f} seconds")
 
     # Read in calculated descriptors and display the dataframe
     st.header('**Calculated molecular descriptors**')
